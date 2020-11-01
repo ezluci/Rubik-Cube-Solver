@@ -5,3 +5,6 @@ First, install Github Desktop and create a clone to this repository to your comp
 
 I made the moves first. Next, I need to make the user-interaction, meaning the user can move the cube.
 For any issues, go to Issues tab and tell me.
+
+No builds yet. You can change `whichMove` to the next move you want to do. Check the declaration of the variable and the functions R(), D(), U_(), etc. (here you can change this variable). Also make sure to put MoveCube() in the FixedUpdate() function. Then, you can see the cube move.
+You can read the colors after every move. It's updating using the MoveChildsAndRearrangeColors(string Move) function.
