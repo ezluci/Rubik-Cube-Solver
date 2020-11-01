@@ -925,6 +925,6 @@ public class Script : MonoBehaviour
  }
         //ShuffleCube();
         //Debug.Log(Random.Range(0, 12));
-        //MoveCube();
+        //MoveCube()
     }
 }
