@@ -986,7 +986,7 @@ public class Script : MonoBehaviour
                                                     else {
                                                         Debug.Log ("This isn't a Player");                
                                                     }
-                                                }*/
+                                                */
     }
 
     void Update()
