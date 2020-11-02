@@ -1,12 +1,9 @@
-﻿
-//Uw Lb Fr Ro Dy Bg
-
-using UnityEngine;
-using System.Collections;
-
+﻿using UnityEngine;
 public class Script : MonoBehaviour
 {
-    string whichMove = "U";
+    string whatDoUWannaDo = "UpdateShuffleCube";
+    int ShuffleStatus = 0;
+    string whichMove = "";
     public bool initializeMove = false;
     //public Vector3 eul; //variabila pentru salvat rotatia eul la inceput
     //public Quaternion quat; //variabila pentru salvat rotatia quat la inceput.
@@ -20,13 +17,67 @@ public class Script : MonoBehaviour
     public char[] BMove = {'g','g','g','g','g','g','g','g','g'};
     char keepMove,keepMove2;
 
-    /*void ShuffleCube()
+    void ShuffleCube()
     {
-        if (Random.Range(1,12) == 1)
+        if (ShuffleStatus < 40)
         {
-            whichMove = "R";
+            Debug.Log(ShuffleStatus);
+            switch (Random.Range(1,13))
+            {
+                case 1:
+                    whichMove="R";
+                    break;
+                case 2:
+                    whichMove="R_";
+                    break;
+                case 3:
+                    whichMove="F";
+                    break;
+                case 4:
+                    whichMove="F_";
+                    break;
+                case 5:
+                    whichMove="U";
+                    break;
+                case 6:
+                    whichMove="U_";
+                    break;
+                case 7:
+                    whichMove="L";
+                    break;
+                case 8:
+                    whichMove="L_";
+                    break;
+                case 9:
+                    whichMove="B";
+                    break;
+                case 10:
+                    whichMove="B_";
+                    break;
+                case 11:
+                    whichMove="D";
+                    break;
+                case 12:
+                    whichMove="D_";
+                    break;
+                default:
+                    Debug.Log("ERORERERRER");
+                    break;
+            }
+            ShuffleStatus++;
+            whatDoUWannaDo="FixedUpdateMoveCube";
         }
-    }*/
+        else
+        {
+            Debug.Log("shuffle complete");
+            whatDoUWannaDo="UpdateSolve";
+        }
+    }
+
+    void Solve()
+    {
+
+    }
 
     void MoveCube()
     {
@@ -69,7 +120,7 @@ public class Script : MonoBehaviour
                 D_();
                 break;
             default:
-                Debug.Log("default");
+                Debug.Log("defaultaa");
                 break;
         }
     }
@@ -637,8 +688,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(90,0,0);
                 initializeMove=false;
-                whichMove="B";
+                whichMove="";
                 MoveChildsAndRearrangeColors("R");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -661,8 +713,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(-90,0,0);
                 initializeMove=false;
-                whichMove="D_";
+                whichMove="";
                 MoveChildsAndRearrangeColors("R_");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -685,8 +738,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(0,0,-90);
                 initializeMove=false;
-                whichMove="U";
+                whichMove="";
                 MoveChildsAndRearrangeColors("F");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -709,8 +763,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(0,0,90);
                 initializeMove=false;
-                whichMove="R";
+                whichMove="";
                 MoveChildsAndRearrangeColors("F_");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -733,8 +788,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(0,90,0);
                 initializeMove=false;
-                whichMove="B";
+                whichMove="";
                 MoveChildsAndRearrangeColors("U");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -757,8 +813,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(0,-90,0);
                 initializeMove=false;
-                whichMove="F";
+                whichMove="";
                 MoveChildsAndRearrangeColors("U_");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -781,8 +838,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(-90,0,0);
                 initializeMove=false;
-                whichMove="B_";
+                whichMove="";
                 MoveChildsAndRearrangeColors("L");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -805,8 +863,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(90,0,0);
                 initializeMove=false;
-                whichMove="F_";
+                whichMove="";
                 MoveChildsAndRearrangeColors("L_");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -829,8 +888,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(0,0,90);
                 initializeMove=false;
-                whichMove="D";
+                whichMove="";
                 MoveChildsAndRearrangeColors("B");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -853,8 +913,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(0,0,-90);
                 initializeMove=false;
-                whichMove="L_";
+                whichMove="";
                 MoveChildsAndRearrangeColors("B_");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -877,8 +938,9 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(0,-90,0);
                 initializeMove=false;
-                whichMove="U";
+                whichMove="";
                 MoveChildsAndRearrangeColors("D");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
@@ -901,30 +963,37 @@ public class Script : MonoBehaviour
             {
                 Obj.transform.eulerAngles = new Vector3(0,90,0);
                 initializeMove=false;
-                whichMove="U_";
+                whichMove="";
                 MoveChildsAndRearrangeColors("D_");
+                whatDoUWannaDo="UpdateShuffleCube";
             }
         }
     }
 
     void FixedUpdate()
     {
-        Debug.Log(Input.mousePosition);
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
- RaycastHit hit;
- 
- if(Physics.Raycast (ray, out hit))
- {
-      if(hit.transform.name == "Player")
-      {
-          Debug.Log ("This is a Player");
-      }
-      else {
-          Debug.Log ("This isn't a Player");                
-      }
- }
-        //ShuffleCube();
-        //Debug.Log(Random.Range(0, 12));
-        //MoveCube();
+        if (whatDoUWannaDo=="FixedUpdateMoveCube")
+            MoveCube();                         /*Debug.Log(Input.mousePosition);
+                                                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                                                RaycastHit hit;
+                                                
+                                                if(Physics.Raycast (ray, out hit))
+                                                {
+                                                    if(hit.transform.name == "Player")
+                                                    {
+                                                        Debug.Log ("This is a Player");
+                                                    }
+                                                    else {
+                                                        Debug.Log ("This isn't a Player");                
+                                                    }
+                                                }*/
+    }
+
+    void Update()
+    {
+        if (whatDoUWannaDo=="UpdateShuffleCube")
+            ShuffleCube();
+        else if (whatDoUWannaDo=="UpdateSolve")
+            Debug.Log("aaa");
     }
 }
