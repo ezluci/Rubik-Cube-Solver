@@ -4,4 +4,4 @@ Made using Unity engine. The main script is located to `Assets/MainScript.cs`. I
 
 I am currently working on: <ins>Solving the cube</ins>.
 
-_**Do you want to try my game? I do have one release! Go to https://github.com/ezluci/Rubik-Cube-Solver/releases.**_ The main script is put in `Main Camera` object! You can read the colors on the cube after every move. It's updating using the MoveChildsAndRearrangeColors(string Move) function.
+_**Do you want to try my game? I have <ins>two</ins> release! Go to https://github.com/ezluci/Rubik-Cube-Solver/releases.**_ The main script is put in `Main Camera` object! You can read the colors on the cube after every move. It's updating using the MoveChildsAndRearrangeColors(string Move) function.
