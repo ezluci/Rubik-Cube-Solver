@@ -1,7 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Script
+    - MainScript
+    - MoveCamera
+    - Shuffler
+    - Solver
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -51,15 +54,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12024}
     - Class: 114
-      Script: {instanceID: 12122}
+      Script: {instanceID: 12466}
     - Class: 114
-      Script: {instanceID: 12468}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12920}
+      Script: {instanceID: 12682}
     - Class: 114
-      Script: {instanceID: 13454}
+      Script: {instanceID: 12922}
     - Class: 114
-      Script: {instanceID: 13834}
+      Script: {instanceID: 13296}
+    - Class: 114
+      Script: {instanceID: 13458}
+    - Class: 114
+      Script: {instanceID: 13704}
+    - Class: 114
+      Script: {instanceID: 13840}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -179,12 +188,6 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: f788b0d08297219d688412700b4dff66
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Script
-  - hash:
-      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -279,6 +282,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: c4bad3e55b67622931b169a9883a5d3b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shuffler
+  - hash:
+      serializedVersion: 2
+      Hash: eb179a412ea60238c49ccf354645daaa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainScript
   - hash:
       serializedVersion: 2
       Hash: 040dd48e3a027d5424519a5fa2009df4
@@ -377,6 +392,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: e3bec0b8da9c465cb9e66806590cd131
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveCamera
+  - hash:
+      serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -411,6 +432,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 50fda84ed40db1e6606efa4425c8dc7d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Solver
   - hash:
       serializedVersion: 2
       Hash: a2612813f45d0ced02c3e4bc9dbea8b4
@@ -510,4 +537,5 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/ezluci/Documents/GitHub/Rubik-Cube-Solver/Rubik Cube Solver.exe
+  playerPath: C:/Users/ezluci/Documents/GitHub/Rubik-Cube-Solver_BUILD/Rubik Cube
+    Solver.exe

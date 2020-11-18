@@ -99,7 +99,7 @@ public class Solver : MonoBehaviour
 
     public void SolveFirstMargini()
 	{
-		if (refScr.UMove[0] == 'w' && refScr.UMove[1] == 'w' && refScr.UMove[2] == 'w' && refScr.UMove[3] == 'w' && refScr.UMove[4] == 'w' && refScr.UMove[5] == 'w' && refScr.UMove[6] == 'w' && refScr.UMove[7] == 'w' && refScr.UMove[8] == 'w')
+		if (refScr.UMove[1] == 'w' && refScr.UMove[3] == 'w' && refScr.UMove[5] == 'w' && refScr.UMove[7] == 'w' && refScr.FMove[1]=='r' && refScr.RMove[1]=='o' && refScr.BMove[7]=='g' && refScr.LMove[1]=='b')
 		{
 			SolveStatus = "SolveFirstColturi";
 			SolveFirstColturi();
@@ -170,7 +170,7 @@ public class Solver : MonoBehaviour
 			_1="R_";_2="D_";_3="R";_4="F";_5="F";
 			refScr.R_("MoveAgs");
 		}
-		else if (refScr.RMove[5] == 'w' && refScr.BMove[5] == 'r')
+		else if (refScr.RMove[5] == 'w' && refScr.BMove[5] == 'r')//asta
 		{
 			_1 = "R";
 			_2 = "R";
@@ -266,7 +266,7 @@ public class Solver : MonoBehaviour
 		}
 		else if (refScr.UMove[1]=='w' && refScr.BMove[7]=='o')
 		{
-			_1="R";_2="R";_3="D_";_4="F";_5="F";
+			_1="B";_2="B";_3="D_";_4="R";_5="R";
 			refScr.R("MoveAgs");
 		}
 		else if (refScr.UMove[1]=='o' && refScr.BMove[7]=='w')//tested
@@ -348,8 +348,284 @@ public class Solver : MonoBehaviour
 			_1="F_";_2="R";_3="F";
 			refScr.F_("MoveAgs");
 		}
-		else if (refScr.)
+		else if (refScr.RMove[7]=='o' && refScr.DMove[5]=='w')
+		{
+			_1="R";_2="R";
+			refScr.R("MoveAgs");
+		}
+		else if (refScr.RMove[7]=='w' && refScr.DMove[5]=='o')
+		{
+			_1="R";_2="F";_3="D";_4="F_";_5="R";_6="R";
+			refScr.R("MoveAgs");
+		}
+		else if (refScr.BMove[1]=='w' && refScr.DMove[7]=='o')//asta
+		{
+			_1="B";_2="R_";_3="B_";
+			refScr.R("MoveAgs");
+		}
+		else if (refScr.BMove[1]=='o' && refScr.DMove[7]=='w')
+		{
+			_1="D_";_2="F";_3="F";
+			refScr.D_("MoveAgs");
+		}
+		else if (refScr.LMove[7]=='o' && refScr.DMove[3]=='w')
+		{
+			_1="D";_2="D";_3="R";_4="R";
+			refScr.D("MoveAgs");
+		}
+		else if (refScr.LMove[7]=='w' && refScr.DMove[3]=='o')
+		{
+			_1="D";_2="F_";_3="R";_4="F";
+			refScr.D("MoveAgs");
+		}
 
+
+
+
+		//g-w
+		else if (refScr.UMove[1]=='g' && refScr.BMove[7]=='w')
+		{
+			_1="B_";_2="R";_3="D";_4="R_";_5="B";_6="B";
+			refScr.B_("MoveAgs");
+		}
+		else if (refScr.RMove[1]=='w' && refScr.UMove[5]=='g')
+		{
+			_1="R";_2="B";
+			refScr.R("MoveAgs");
+		}
+		else if (refScr.RMove[1]=='g' && refScr.UMove[5]=='w')
+		{
+			_1="R";_2="R";_3="D";_4="B";_5="B";
+			refScr.R("MoveAgs");
+		}
+		else if (refScr.UMove[7]=='w' && refScr.FMove[1]=='g')
+		{
+			_1="F";_2="F";_3="D";_4="D";_5="B";_6="B";
+			refScr.F("MoveAgs");
+		}
+		else if (refScr.UMove[7]=='g' && refScr.FMove[1]=='w')
+		{
+			_1="F";_2="F";_3="D";_4="R_";_5="B";_6="R";
+			refScr.F("MoveAgs");
+		}
+		else if (refScr.UMove[3]=='g' && refScr.LMove[1]=='w')
+		{
+			_1="L_";_2="B_";
+			refScr.L_("MoveAgs");
+		}
+		else if (refScr.UMove[3]=='w' && refScr.LMove[1]=='g')
+		{
+			_1="L";_2="L";_3="D_";_4="B";_5="B";
+			refScr.L("MoveAgs");
+		}
+
+
+		else if (refScr.RMove[5]=='w' && refScr.BMove[5]=='g')
+		{
+			_1="B";
+			refScr.B("MoveAgs");
+		}
+		else if (refScr.RMove[5]=='g' && refScr.BMove[5]=='w')
+		{
+			_1="R";_2="D";_3="B";_4="B";
+			refScr.R("MoveAgs");
+		}
+		else if (refScr.BMove[3]=='g' && refScr.LMove[3]=='w')
+		{
+			_1="B_";
+			refScr.B_("MoveAgs");
+		}
+		else if (refScr.BMove[3]=='w' && refScr.LMove[3]=='g')
+		{
+			_1="L_";_2="D_";_3="B";_4="B";
+			refScr.L_("MoveAgs");
+		}
+		else if (refScr.LMove[5]=='w' && refScr.FMove[3]=='g')
+		{
+			_1="L";_2="L";_3="B_";_4="L";_5="L";
+			refScr.L("MoveAgs");
+		}
+		else if (refScr.LMove[5]=='g' && refScr.FMove[3]=='w')
+		{
+			_1="L";_2="D_";_3="L_";_4="B";_5="B";
+			refScr.L("MoveAgs");
+		}
+		else if (refScr.RMove[3]=='w' && refScr.FMove[5]=='g')
+		{
+			_1="R";_2="R";_3="B";_4="R";_5="R";
+			refScr.R("MoveAgs");
+		}
+		else if (refScr.RMove[3]=='g' && refScr.FMove[5]=='w')
+		{
+			_1="R_";_2="D";_3="R";_4="B";_5="B";
+			refScr.R("MoveAgs");
+		}
+
+
+		else if (refScr.BMove[1]=='g' && refScr.DMove[7]=='w')
+		{
+			_1="B";_2="B";
+			refScr.B("MoveAgs");
+		}
+		else if (refScr.BMove[1]=='w' && refScr.DMove[7]=='g')
+		{
+			_1="B";_2="R";_3="D";_4="R_";_5="B";_6="B";
+			refScr.B("MoveAgs");
+		}
+		else if (refScr.LMove[7]=='g' && refScr.DMove[3]=='w')
+		{
+			_1="D_";_2="B";_3="B";
+			refScr.D_("MoveAgs");
+		}
+		else if (refScr.LMove[7]=='w' && refScr.DMove[3]=='g')
+		{
+			_1="L";_2="B_";_3="L_";
+			refScr.L("MoveAgs");
+		}
+		else if (refScr.FMove[7]=='g' && refScr.DMove[1]=='w')
+		{
+			_1="D";_2="D";_3="B";_4="B";
+			refScr.D("MoveAgs");
+		}
+		else if (refScr.FMove[7]=='w' && refScr.DMove[1]=='g')
+		{
+			_1="D_";_2="L";_3="B_";_4="L_";
+			refScr.D_("MoveAgs");
+		}
+		else if (refScr.RMove[7]=='g' && refScr.DMove[5]=='w')
+		{
+			_1="D";_2="B";_3="B";
+			refScr.D("MoveAgs");
+		}
+		else if (refScr.RMove[7]=='w' && refScr.DMove[5]=='g')
+		{
+			_1="R_";_2="B";_3="R";
+			refScr.R_("MoveAgs");
+		}
+		
+
+
+
+		//b-w
+		else if (refScr.LMove[1]=='w' && refScr.UMove[3]=='b')
+		{
+			_1="L";_2="L";_3="D";_4="F";_5="L_";_6="F_";
+			refScr.L("MoveAgs");
+		}
+		else if (refScr.BMove[7]=='w' && refScr.UMove[1]=='b')
+		{
+			_1="B";_2="L";
+			refScr.B("MoveAgs");
+		}
+		else if (refScr.BMove[7]=='b' && refScr.UMove[1]=='w')
+		{
+			_1="B";_2="B";_3="D";_4="L";_5="L";
+			refScr.B("MoveAgs");
+		}
+		else if (refScr.UMove[5]=='w' && refScr.RMove[1]=='b')
+		{
+			_1="R";_2="R";_3="D";_4="D";_5="L";_6="L";
+			refScr.R("MoveAgs");
+		}
+		else if (refScr.UMove[5]=='b' && refScr.RMove[1]=='w')
+		{
+			_1="R";_2="R";_3="D_";_4="F";_5="L_";_6="F_";
+			refScr.R("MoveAgs");
+		}
+		else if (refScr.UMove[7]=='b' && refScr.FMove[1]=='w')
+		{
+			_1="F_";_2="L_";
+			refScr.F_("MoveAgs");
+		}
+		else if (refScr.UMove[7]=='w' && refScr.FMove[1]=='b')
+		{
+			_1="F";_2="F";_3="D_";_4="L";_5="L";
+			refScr.F("MoveAgs");
+		}
+
+
+		else if (refScr.LMove[5]=='b' && refScr.FMove[3]=='w')
+		{
+			_1="L_";
+			refScr.L_("MoveAgs");
+		}
+		else if (refScr.LMove[5]=='w' && refScr.FMove[3]=='b')
+		{
+			_1="F_";_2="D_";_3="F";_4="L";_5="L";
+			refScr.F_("MoveAgs");
+		}
+		else if (refScr.LMove[3]=='b' && refScr.BMove[3]=='w')
+		{
+			_1="L";
+			refScr.L("MoveAgs");
+		}
+		else if (refScr.LMove[3]=='w' && refScr.BMove[3]=='b')
+		{
+			_1="B";_2="D";_3="B_";_4="L";_5="L";
+			refScr.B("MoveAgs");
+		}
+		else if (refScr.FMove[5]=='b' && refScr.RMove[3]=='w')
+		{
+			_1="F";_2="D_";_3="F_";_4="L";_5="L";
+			refScr.F("MoveAgs");
+		}
+		else if (refScr.FMove[5]=='w' && refScr.RMove[3]=='b')
+		{
+			_1="F";_2="F";_3="L_";_4="F";_5="F";
+			refScr.F("MoveAgs");
+		}
+		else if (refScr.BMove[5]=='w' && refScr.RMove[5]=='b')
+		{
+			_1="B";_2="B";_3="L";_4="B";_5="B";
+			refScr.B("MoveAgs");
+		}
+		else if (refScr.BMove[5]=='b' && refScr.RMove[5]=='w')
+		{
+			_1="B_";_2="D";_3="B";_4="L";_5="L";
+			refScr.B_("MoveAgs");
+		}
+		
+
+		else if (refScr.LMove[7]=='b' && refScr.DMove[3]=='w')
+		{
+			_1="L";_2="L";
+			refScr.L("MoveAgs");
+		}
+		else if (refScr.LMove[7]=='w' && refScr.DMove[3]=='b')
+		{
+			_1="D";_2="F";_3="L_";_4="F_";
+			refScr.D("MoveAgs");
+		}
+		else if (refScr.FMove[7]=='w' && refScr.DMove[1]=='b')
+		{
+			_1="F";_2="L_";_3="F_";
+			refScr.F("MoveAgs");
+		}
+		else if (refScr.FMove[7]=='b' && refScr.DMove[1]=='w')
+		{
+			_1="D_";_2="L";_3="L";
+			refScr.D_("MoveAgs");
+		}
+		else if (refScr.BMove[1]=='b' && refScr.DMove[7]=='w')
+		{
+			_1="D";_2="L";_3="L";
+			refScr.D("MoveAgs");
+		}
+		else if (refScr.BMove[1]=='w' && refScr.DMove[7]=='b')
+		{
+			_1="B_";_2="L";_3="B";
+			refScr.B_("MoveAgs");
+		}
+		else if (refScr.RMove[7]=='w' && refScr.DMove[5]=='b')
+		{
+			_1="D";_2="B_";_3="L";_4="B";
+			refScr.D("MoveAgs");
+		}
+		else if (refScr.RMove[7]=='b' && refScr.DMove[5]=='w')
+		{
+			_1="D";_2="D";_3="L";_4="L";
+			refScr.D("MoveAgs");
+		}
     }
 
     public void SolveFirstColturi()

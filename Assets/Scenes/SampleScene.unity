@@ -2399,8 +2399,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.258989, g: 0.5660378, b: 0.5481994, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2492,6 +2492,7 @@ MonoBehaviour:
   refSol: {fileID: 963194229}
   whatDoUWannaDo: UpdateShuffleCube
   initializeMove: 0
+  moveSpeed: 5.61
   UMove: 770077007700770077007700770077007700
   LMove: 620062006200620062006200620062006200
   FMove: 720072007200720072007200720072007200

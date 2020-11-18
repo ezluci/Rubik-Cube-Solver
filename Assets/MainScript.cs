@@ -11,6 +11,7 @@ public class MainScript : MonoBehaviour
     public Shuffler refShu; public Solver refSol;
     public string whatDoUWannaDo = "UpdateShuffleCube";
     public bool initializeMove = false;//sau neinitiallizat
+    public float moveSpeed = 3f;
     GameObject Obj;
     Quaternion deltaRotation;
     public char[] UMove = {'w','w','w','w','w','w','w','w','w'};
@@ -578,7 +579,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (1.04 <= ObjectFound.transform.parent.position.x && ObjectFound.transform.parent.position.x <= 1.06)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.right);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.right);
             initializeMove=true;
         }
         else
@@ -607,7 +608,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (1.04 <= ObjectFound.transform.parent.position.x && ObjectFound.transform.parent.position.x <= 1.06)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.left);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.left);
             initializeMove=true;
         }
         else
@@ -636,7 +637,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (-0.01 <= ObjectFound.transform.parent.position.z && ObjectFound.transform.parent.position.z <= 0.01)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.back);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.back);
             initializeMove=true;
         }
         else
@@ -665,7 +666,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (-0.01 <= ObjectFound.transform.parent.position.z && ObjectFound.transform.parent.position.z <= 0.01)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.forward);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.forward);
             initializeMove=true;
         }
         else
@@ -694,7 +695,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (5.09 <= ObjectFound.transform.parent.position.y && ObjectFound.transform.parent.position.y <= 5.11)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.up);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.up);
             initializeMove=true;
         }
         else
@@ -723,7 +724,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (5.09 <= ObjectFound.transform.parent.position.y && ObjectFound.transform.parent.position.y <= 5.11)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.down);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.down);
             initializeMove=true;
         }
         else
@@ -752,7 +753,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (-1.06 <= ObjectFound.transform.parent.position.x && ObjectFound.transform.parent.position.x <= -1.04)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.left);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.left);
             initializeMove=true;
         }
         else
@@ -781,7 +782,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (-1.06 <= ObjectFound.transform.parent.position.x && ObjectFound.transform.parent.position.x <= -1.04)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.right);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.right);
             initializeMove=true;
         }
         else
@@ -810,7 +811,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (2.09 <= ObjectFound.transform.parent.position.z && ObjectFound.transform.parent.position.z <= 2.11)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.forward);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.forward);
             initializeMove=true;
         }
         else
@@ -839,7 +840,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (2.09 <= ObjectFound.transform.parent.position.z && ObjectFound.transform.parent.position.z <= 2.11)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.back);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.back);
             initializeMove=true;
         }
         else
@@ -868,7 +869,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (2.99 <= ObjectFound.transform.parent.position.y && ObjectFound.transform.parent.position.y <= 3.01)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.down);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.down);
             initializeMove=true;
         }
         else
@@ -897,7 +898,7 @@ public class MainScript : MonoBehaviour
             foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Respawn"))
                 if (2.99 <= ObjectFound.transform.parent.position.y && ObjectFound.transform.parent.position.y <= 3.01)
                     ObjectFound.transform.parent.parent = Obj.transform;
-            deltaRotation = Quaternion.AngleAxis(3f, Vector3.up);
+            deltaRotation = Quaternion.AngleAxis(moveSpeed, Vector3.up);
             initializeMove=true;
         }
         else
