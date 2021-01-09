@@ -1,14 +1,9 @@
 ﻿using UnityEngine;
 public class MainScript : MonoBehaviour
 {
-
-
-
-
-
-
-
-    public Shuffler refShu; public Solver refSol;
+    public Shuffler refShu;
+    public Solver refSol;
+    public CurrentMove refCrM;
     public string whatDoUWannaDo = "UpdateShuffleCube";
     public bool initializeMove = false;//sau neinitiallizat
     public float moveSpeed = 3f;
@@ -21,6 +16,11 @@ public class MainScript : MonoBehaviour
     public char[] DMove = {'y','y','y','y','y','y','y','y','y'};
     public char[] BMove = {'g','g','g','g','g','g','g','g','g'};
     char keepMove,keepMove2;
+
+    private void Start()
+    {
+        
+    }
 
     void MoveChildsAndRearrangeColors(string Move)
     {
@@ -573,6 +573,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: R";
                 whatDoUWannaDo = "RToMoveAgs";
             }
             Obj = GameObject.Find("RObject");
@@ -602,6 +603,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                    refCrM.currentMoveVar = "Move: R'";
                 whatDoUWannaDo = "R_ToMoveAgs";
             }
             Obj = GameObject.Find("RObject");
@@ -631,6 +633,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: F";
                 whatDoUWannaDo = "FToMoveAgs";
             }
             Obj = GameObject.Find("FObject");
@@ -660,6 +663,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: F'";
                 whatDoUWannaDo = "F_ToMoveAgs";
             }
             Obj = GameObject.Find("FObject");
@@ -689,6 +693,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: U";
                 whatDoUWannaDo = "UToMoveAgs";
             }
             Obj = GameObject.Find("UObject");
@@ -718,6 +723,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: U'";
                 whatDoUWannaDo = "U_ToMoveAgs";
             }
             Obj = GameObject.Find("UObject");
@@ -747,6 +753,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: L";
                 whatDoUWannaDo = "LToMoveAgs";
             }
             Obj = GameObject.Find("LObject");
@@ -776,6 +783,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: L'";
                 whatDoUWannaDo = "L_ToMoveAgs";
             }
             Obj = GameObject.Find("LObject");
@@ -805,6 +813,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: B";
                 whatDoUWannaDo = "BToMoveAgs";
             }
             Obj = GameObject.Find("BObject");
@@ -834,6 +843,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: B'";
                 whatDoUWannaDo = "B_ToMoveAgs";
             }
             Obj = GameObject.Find("BObject");
@@ -863,6 +873,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: D";
                 whatDoUWannaDo = "DToMoveAgs";
             }
             Obj = GameObject.Find("DObject");
@@ -892,6 +903,7 @@ public class MainScript : MonoBehaviour
         {
             if (next == "MoveAgs")
             {
+                refCrM.currentMoveVar = "Move: D'";
                 whatDoUWannaDo = "D_ToMoveAgs";
             }
             Obj = GameObject.Find("DObject");

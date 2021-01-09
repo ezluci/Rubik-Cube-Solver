@@ -31,9 +31,16 @@ public class MoveCamera : MonoBehaviour
         {
             if (!(Input.mousePosition == lastMouse))
             {
-                //Debug.Log("s-a schimbat!!");
-                cameraRef.transform.LookAt(transform);
-                cameraRef.transform.Translate(Vector3.right * Time.deltaTime * 13f);
+                if (Input.mousePosition.x > lastMouse.x)
+                {
+                    cameraRef.transform.Translate(Vector3.right * Time.deltaTime * 13f);
+                    cameraRef.transform.LookAt(transform);
+                }
+                else
+                {
+                    cameraRef.transform.Translate(Vector3.left * Time.deltaTime * 13f);
+                    cameraRef.transform.LookAt(transform);
+                }
                 difMouse = lastMouse - Input.mousePosition;
                 /*cameraRef.transform.RotateAround(/*transform.eulerAngles, new Vector3 (1f,1f,1f), 3.5f);*/
                 lastMouse = Input.mousePosition;

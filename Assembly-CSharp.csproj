@@ -36,10 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Shuffler.cs" />
-     <Compile Include="Assets\MainScript.cs" />
-     <Compile Include="Assets\MoveCamera.cs" />
-     <Compile Include="Assets\Solver.cs" />
+     <Compile Include="Assets\Scripts\Shuffler.cs" />
+     <Compile Include="Assets\Scripts\MainScript.cs" />
+     <Compile Include="Assets\Scripts\CurrentMove.cs" />
+     <Compile Include="Assets\Scripts\MoveCamera.cs" />
+     <Compile Include="Assets\Scripts\Solver.cs" />
+     <Compile Include="Assets\Scripts\StartMenu.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

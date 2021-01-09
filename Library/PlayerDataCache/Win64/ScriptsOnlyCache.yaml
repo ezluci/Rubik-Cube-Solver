@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CurrentMove
     - MainScript
     - MoveCamera
     - Shuffler
@@ -14,10 +15,10 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -47,28 +48,32 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11808}
+      Script: {instanceID: 11810}
     - Class: 114
-      Script: {instanceID: 11984}
+      Script: {instanceID: 11986}
     - Class: 114
-      Script: {instanceID: 12024}
+      Script: {instanceID: 12026}
     - Class: 114
-      Script: {instanceID: 12466}
+      Script: {instanceID: 12468}
     - Class: 114
-      Script: {instanceID: 12602}
+      Script: {instanceID: 12604}
     - Class: 114
-      Script: {instanceID: 12682}
+      Script: {instanceID: 12684}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12712}
     - Class: 114
-      Script: {instanceID: 13296}
+      Script: {instanceID: 13300}
     - Class: 114
-      Script: {instanceID: 13458}
+      Script: {instanceID: 13462}
     - Class: 114
-      Script: {instanceID: 13704}
+      Script: {instanceID: 13708}
     - Class: 114
-      Script: {instanceID: 13840}
+      Script: {instanceID: 13844}
+    - Class: 114
+      Script: {instanceID: 13880}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -284,13 +289,13 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: c4bad3e55b67622931b169a9883a5d3b
+      Hash: 7b050da2b05984e1a00f7790d1eb4c12
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shuffler
   - hash:
       serializedVersion: 2
-      Hash: eb179a412ea60238c49ccf354645daaa
+      Hash: a775f89da481228307c4a59cce47f2d8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainScript
@@ -300,6 +305,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: b89dbba3a7901c84e6b75a5418bc336d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CurrentMove
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -434,7 +445,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 50fda84ed40db1e6606efa4425c8dc7d
+      Hash: 948fed03cc7273c7681c15bd21cc93c9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Solver
