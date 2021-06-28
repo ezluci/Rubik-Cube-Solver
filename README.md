@@ -7,4 +7,4 @@ Please let me know if you encounter any bugs in the game, because there are a lo
 
 _**Do you want to try my game? I have <ins>two</ins> releases! Go to https://github.com/ezluci/Rubik-Cube-Solver/releases.**_
 
-The main script is located to `Assets/MainScript.cs` and it is attached to `Main Camera` object! You can read the colors on the cube after every move. It's updating using the MoveChildsAndRearrangeColors(string Move) function.
+The scripts are located to `Assets/Scripts`.
