@@ -5,6 +5,6 @@ I am currently working on: <ins>Solving the cube</ins>. The cube solves the __1.
 
 Please let me know if you encounter any bugs in the game, because there are a lot of algorithms. You can go to https://github.com/ezluci/Rubik-Cube-Solver/issues and create a issue.
 
-_**Do you want to try my game? I have <ins>two</ins> releases! Go to https://github.com/ezluci/Rubik-Cube-Solver/releases.**_
+_**Do you want to try my game? I have <ins>three</ins> releases! Go to https://github.com/ezluci/Rubik-Cube-Solver/releases.**_
 
 The scripts are located to `Assets/Scripts`.
